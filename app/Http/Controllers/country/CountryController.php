@@ -29,4 +29,10 @@ class CountryController extends Controller
         $countryid->update($request->all());
         return \response()->json($countryid,200);
     }
+
+    public function countryDelete(Request $request, CountryModel $countryid)
+    {
+        $countryid->delete();
+        return \response()->json(null,204);
+    }
 }
